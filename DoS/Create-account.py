@@ -31,7 +31,7 @@ async def main():
         for _ in range(count):
             email = email_gen()
             print(email)
-            payload = {"email": email, "password": "ape123456", "chessLevel": 1}
+            payload = {} # Needed request body
             tasks.append(asyncio.create_task(send_post_request(session, url, payload)))
         responses = await asyncio.gather(*tasks)
         # print(responses)  # Print all responses if needed
